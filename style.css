@@ -1,0 +1,27 @@
+h1 {
+    font: bold;
+    font-size: 4em;
+}
+
+#dias {
+    font:bold;
+}
+
+div {
+    display: inline-block;
+}
+
+.contagem-regressiva {
+    display: flex;
+}
+
+.dias-restantes {
+    display: contents;
+    flex-direction: column;
+    position: relative;
+}
+
+#dias-numero {
+    margin: 2px;
+    display: flex;
+}
