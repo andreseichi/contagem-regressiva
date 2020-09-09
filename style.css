@@ -16,7 +16,6 @@ div {
 }
 
 .dias-restantes {
-    display: contents;
     flex-direction: column;
     position: relative;
 }
