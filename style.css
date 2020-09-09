@@ -24,3 +24,7 @@ div {
     margin: 2px;
     display: flex;
 }
+
+.dias {
+    padding-right: 5px;
+}
