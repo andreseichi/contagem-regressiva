@@ -21,24 +21,26 @@ const diferença = dataTarget.getTime() - data.getTime();
 console.log(diferença);
 
 //converto millisegundos para segundos, padrão
-const segundosConvertido = diferença / 1000;
+const segundosConvertido = Math.floor(diferença / 1000);
 console.log(segundosConvertido);
 
-//converto millisegundos para dias
-const diasConvertido = ((segundosConvertido / 60) / 60) / 24;
+//converto segundos para dias
+const diasConvertido = Math.floor(segundosConvertido / (3600 * 24))
 console.log(diasConvertido);
 
-//pra pegar as horas, eu pego o restante da divisão entre horas e 24 (que é dia) representado pela letra W na imagem do cálculo
-const horasConvertido = ((segundosConvertido / 60) / 60) % 24;
+// converto os segundos restantes para horas (segundosConvertido - (diasConvertido * (3600 * 24)))
+const horasConvertido = Math.floor((segundosConvertido - (diasConvertido * (3600 * 24))) / 3600)
 console.log(horasConvertido);
 
-//pego o restante da divisão entre minutos e 60 (horas) representado pela letra A na imagem do cálculo
-const minutosConvertido = (segundosConvertido / 60) % 60;
+// mesma logica da hora, só que pra minutos
+const minutosConvertido = Math.floor((segundosConvertido - (diasConvertido * (3600 * 24)) - (horasConvertido * 3600)) / 60)
 console.log(minutosConvertido);
 
 //pego o restante da divisão entre segundos e 60 (minutos) representado pela letra B na imagem do cáculo
 const segundos = segundosConvertido % 60;
 console.log(segundos);
+
+
 
 //aqui o resultado de qnt tempo falta
 console.log(`Faltam ${diasConvertido} dias, ${horasConvertido} horas, ${minutosConvertido} minutos e ${segundos} segundos`);
