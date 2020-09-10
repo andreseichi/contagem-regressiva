@@ -50,7 +50,7 @@ const countdown = () => {
 
   //aqui o resultado de qnt tempo falta
 
-  return (`Faltam ${diasConvertido} dias, ${horasConvertido} horas, ${minutosConvertido} minutos e ${segundos} segundos`);
+  return (`${diasConvertido} dias, ${horasConvertido} horas, ${minutosConvertido} minutos e ${segundos} segundos`);
 };
 
 var elementoTeste = document.querySelector(".teste");
