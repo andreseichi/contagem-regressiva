@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    background: rgb(219, 57, 165);
+    background: #2580e9;
 }
 
 div {
@@ -26,11 +26,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: royalblue;
     margin: 40px 0;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    background-color: #257ae9;
 }
 
 .contagem-regressiva.shadow {
-    box-shadow: 10px -10px 25px rgba(33, 231, 245, 0.63);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
