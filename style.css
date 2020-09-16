@@ -22,6 +22,16 @@ p {
     font-size: 3em;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(133, 48, 100);
+}
+
+a:hover {
+    font-size: 30px;
+    transition: 0.5s;
+}
+
 .contagem-regressiva {
     display: flex;
     justify-content: center;
@@ -36,4 +46,10 @@ p {
 
 .contagem-regressiva.shadow {
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0px;
+    font-size: 25px;
 }

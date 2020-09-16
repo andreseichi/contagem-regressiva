@@ -13,29 +13,29 @@ const countdown = () => {
   const diferença = dataTarget.getTime() - data.getTime();
 
   //converto millisegundos para segundos, padrão
-  const segundosConvertido = Math.floor(diferença / 1000);
+  const segundosTotal = Math.floor(diferença / 1000);
 
   // 1 dia = 3600 * 24 segundos
-  const diasConvertido = Math.floor(segundosConvertido / (3600 * 24));
+  const diasConvertido = Math.floor(segundosTotal / (3600 * 24));
 
   // converto os segundos restantes para horas (segundosConvertido - (diasConvertido * (3600 * 24)))
   const horasConvertido = Math.floor(
-    (segundosConvertido - diasConvertido * (3600 * 24)) / 3600
+    (segundosTotal - diasConvertido * (3600 * 24)) / 3600
   );
 
   // mesma logica da hora, só que pra minutos
   const minutosConvertido = Math.floor(
-    (segundosConvertido -
+    (segundosTotal -
       diasConvertido * (3600 * 24) -
       horasConvertido * 3600) /
       60
   );
 
   //pego o restante da divisão entre segundos e 60 (minutos) representado pela letra B na imagem do cáculo
-  const segundos = segundosConvertido % 60;
+  const segundosConvertido = segundosTotal % 60;
 
   //retorna o resultado de qnt tempo falta em formato de string
-  return `${diasConvertido} dias, ${horasConvertido} horas, ${minutosConvertido} minutos e ${segundos} segundos`;
+  return `${diasConvertido} dias, ${horasConvertido} horas, ${minutosConvertido} minutos e ${segundosConvertido} segundos`;
 };
 
 const elementoTeste = document.querySelector(".teste");
