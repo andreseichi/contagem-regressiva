@@ -4,7 +4,7 @@ const countdown = () => {
   //aqui é hardcode para ter o dia exato desejado, pretendo mudar para que não seja apenas ano novo
   const diaTarget = 01;
   const mesTarget = 01;
-  const anoTarget = 2021;
+  const anoTarget = 2022;
 
   //e então instancio a data que quero, para que fique um objeto bonito do mesmo jeito que o "data"
   const dataTarget = new Date(`${anoTarget}-${mesTarget}-${diaTarget}`);
